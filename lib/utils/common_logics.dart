@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:testing_cashfree/utils/common_colors.dart';
 import 'package:testing_cashfree/utils/custom_loader.dart';
 
@@ -14,7 +13,7 @@ void updateStatusBarColor(BuildContext context, {bool? fromSplash = false}) {
             isDarkTheme(context) ? Brightness.light : Brightness.dark,
         statusBarColor: isDarkTheme(context)
             ? CommonColors.colorBlackShade1
-            : CommonColors.colorOrangeShade2,
+            : CommonColors.colorPinkShade2,
         systemStatusBarContrastEnforced: true));
   } else {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(

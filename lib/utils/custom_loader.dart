@@ -13,7 +13,7 @@ class CustomLoader extends StatefulWidget {
 
   const CustomLoader({
     Key? key,
-    this.color = CommonColors.colorOrangeShade2,
+    this.color = CommonColors.colorPinkShade2,
     this.bgColor,
     this.isCompact = false,
   }) : super(key: key);
