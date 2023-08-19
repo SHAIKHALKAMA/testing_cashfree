@@ -1,4 +1,5 @@
-class Myroutes{
+class RouteConstants{
   static String home="/home";
-  static String Profile="/Profile";
+  static String bottomview="/bottomview";
+  static String profile="/Profile";
 }
