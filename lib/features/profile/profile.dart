@@ -28,13 +28,14 @@ class _ProfilePageState extends State<ProfilePage> {
                     Radius.circular(ScreenConstant.size14),
                   ),
                 ),
-                child: const Row(
+                child: Row(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       
                     ),
                     Column(
-                      children: [
+                      children:const [
+                        
                         Text("Asad Ansari"),
                         Text("+91 9028533091"),
                         Text("asadansari@gmail.com")
