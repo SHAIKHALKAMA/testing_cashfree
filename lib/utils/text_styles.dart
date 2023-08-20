@@ -140,7 +140,7 @@ class TextStyles {
         color: CommonColors.colorBlackShade1,
         fontSize: FontSize.s16,
         fontWeight: FontWeight.w600,
-        fontFamily: CommonFonts.interFont,
+        fontFamily: CommonFonts.poppinsFont,
       );
 
   static TextStyle get textStyleSemiBold16ForeGround => TextStyle(
@@ -157,8 +157,8 @@ class TextStyles {
   static TextStyle get textStyleBold16 => TextStyle(
         color: CommonColors.colorBlackShade1,
         fontSize: FontSize.s16,
-        fontWeight: FontWeight.w700,
-        fontFamily: CommonFonts.interFont,
+        fontWeight: FontWeight.bold,
+        fontFamily: CommonFonts.poppinsFont,
       );
 
 ////////////////////////////////////////////////////
