@@ -35,7 +35,7 @@ class CommonColors {
 
   static const Color colorGreenShade1 = Color(0xFF018101);
   static const Color colorGreenShade2 = Color(0xFFE3F9E4);
-  static const Color colorGreenShade3 = Color(0xFF00A551);
+  static const Color colorGreenShade3 = Color(0xFF5AB142);
 
   static const Color colorBlueShade1 = Color(0xFF809CD8);
   static const Color colorBlueShade2 = Color(0xFFC8DBFC);

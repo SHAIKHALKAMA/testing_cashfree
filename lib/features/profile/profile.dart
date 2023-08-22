@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:testing_cashfree/features/profile/widget/info.dart';
 import 'package:testing_cashfree/utils/common_colors.dart';
 import 'package:testing_cashfree/utils/screen_constants.dart';
 import 'package:testing_cashfree/utils/text_styles.dart';
