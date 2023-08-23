@@ -16,7 +16,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  @override
+ //mechanic for search operation
+  // List display_list=[];
+
+// void updatelist(String value){
+//       setState(() {
+//         display_list =Recommendedmodel.where((element) =>element.hotelname.toLowerCase().contains(value.toLowerCase()).toList());
+//       });
+//     }
   // Asharaf,whats on your mind
   List grimage=[
     "assets/images/biryani.png",
@@ -32,8 +39,10 @@ class _HomePageState extends State<HomePage> {
   List text=[
     "Biryani","Biryani","Chinese","Chinese","South Indian","South Indian","Pizza","Pizza"
   ];
+
+  
   @override
-  Widget build(_) {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: CommonColors.colorWhiteShade1,
       body: SingleChildScrollView(
@@ -162,20 +171,12 @@ class _HomePageState extends State<HomePage> {
                 height: ScreenConstant.size56,
                 width: ScreenConstant.size350,
                 child: TextField(
+                  // onChanged: (value) =>updatelist(value),
                   cursorColor: CommonColors.colorBlackShade1,
                   decoration: InputDecoration(
                       filled: true,
                       fillColor: CommonColors.colorPinkShade1,
-                      prefix: Padding(
-                        padding: EdgeInsets.only(
-                          left: ScreenConstant.size10,
-                          right: ScreenConstant.size10,
-                        ),
-                        child: Image(
-                          image: const AssetImage("assets/icon/searchIcon.png"),
-                          width: ScreenConstant.size18,
-                        ),
-                      ),
+                          prefixIcon: Image.asset("assets/icon/searchIcon.png",height: 10,),
                       hintText: "Search for restaurant, item, or more",
                       hintStyle:
                           GoogleFonts.poppins(fontSize: ScreenConstant.size13),
@@ -189,6 +190,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+            //cards
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16),
@@ -218,6 +220,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            // banners
           CarouselSlider(items: [
             Image.asset("assets/images/banner1.png", height: ScreenConstant.size210),
             Image.asset("assets/images/banner2.png", height: ScreenConstant.size210),
@@ -231,6 +234,7 @@ class _HomePageState extends State<HomePage> {
             viewportFraction: 0.7,
           ),
           ),
+          //Recommended
             Padding(
               padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16),
               child: Text(
@@ -271,6 +275,7 @@ class _HomePageState extends State<HomePage> {
                ],
              ),
            ),
+           //Ashraf, whats on your mind?
            Padding(
              padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size10),
              child: Text("Ashraf, whats on your mind?",style: TextStyles.textStyleSemiBold16,),
@@ -322,6 +327,7 @@ class _HomePageState extends State<HomePage> {
              padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size10),
              child: Text("Top offer’s around you",style: TextStyles.textStyleSemiBold16,),
            ),
+           //offercards
            SingleChildScrollView(
             padding: EdgeInsetsDirectional.symmetric(horizontal: ScreenConstant.size16),
             scrollDirection: Axis.horizontal,
@@ -342,6 +348,7 @@ class _HomePageState extends State<HomePage> {
               ],
              ),
            ),
+           //filters 
            SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size10),
@@ -362,65 +369,8 @@ class _HomePageState extends State<HomePage> {
               ],
              ),
            ),
-           Padding(
-             padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size10),
-             child: Text("Top offer’s around you",style: TextStyles.textStyleSemiBold16,),
-           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size6),
-            child: Container(
-              height: ScreenConstant.size110,
-              width: ScreenConstant.size350,
-              decoration: BoxDecoration(
-                color: CommonColors.colorPinkShade1,
-                borderRadius: BorderRadius.circular(ScreenConstant.size12)
-              ),
-              child: restocontainer(Address: 'Near Hafiz Baba Dargah', Soff: 'upto 15% OFF', Slogo: "assets/images/non-veg.png", cont1: 'Burger', Star: '4.3', cont3: 'Wings', cont2: 'Pizza', hotelname: 'Fire Wings', images:"assets/images/resto1.png" , tym: '30 mins  •  ₹230 for two',)),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size6),
-            child: Container(
-              height: ScreenConstant.size110,
-              width: ScreenConstant.size350,
-              decoration: BoxDecoration(
-                color: CommonColors.colorPinkShade1,
-                borderRadius: BorderRadius.circular(ScreenConstant.size12)
-              ),
-              child: restocontainer(Address: 'Near Hafiz Baba Dargah', Soff: 'upto 15% OFF', Slogo: "assets/images/veg.png", cont1: 'Burger', Star: '4.3', cont3: 'Wings', cont2: 'Pizza', hotelname: 'Bhiwandi Darbar', images:"assets/images/resto1a.png" , tym: '30 mins  •  ₹230 for two',)),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size6),
-            child: Container(
-              height: ScreenConstant.size110,
-              width: ScreenConstant.size350,
-              decoration: BoxDecoration(
-                color: CommonColors.colorPinkShade1,
-                borderRadius: BorderRadius.circular(ScreenConstant.size12)
-              ),
-              child: restocontainer(Address: 'Near Hafiz Baba Dargah', Soff: 'upto 15% OFF', Slogo: "assets/images/non-veg.png", cont1: 'Burger', Star: '4.3', cont3: 'Wings', cont2: 'Pizza', hotelname: 'Mamaji Pavbhaji', images:"assets/images/resto2.png" , tym: '30 mins  •  ₹230 for two',)),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size6),
-            child: Container(
-              height: ScreenConstant.size110,
-              width: ScreenConstant.size350,
-              decoration: BoxDecoration(
-                color: CommonColors.colorPinkShade1,
-                borderRadius: BorderRadius.circular(ScreenConstant.size12)
-              ),
-              child: restocontainer(Address: 'Near Hafiz Baba Dargah', Soff: 'upto 15% OFF', Slogo: "assets/images/veg.png", cont1: 'Burger', Star: '4.3', cont3: 'Wings', cont2: 'Pizza', hotelname: "Anna'S Kitchen", images:"assets/images/resto2a.png" , tym: '30 mins  •  ₹230 for two',)),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size6),
-            child: Container(
-              height: ScreenConstant.size110,
-              width: ScreenConstant.size350,
-              decoration: BoxDecoration(
-                color: CommonColors.colorPinkShade1,
-                borderRadius: BorderRadius.circular(ScreenConstant.size12)
-              ),
-              child: restocontainer(Address: 'Near Hafiz Baba Dargah', Soff: 'upto 15% OFF', Slogo: "assets/images/non-veg.png", cont1: 'Burger', Star: '4.3', cont3: 'Wings', cont2: 'Pizza', hotelname: "French Fries", images:"assets/images/resto3a.png" , tym: '30 mins  •  ₹230 for two',)),
-          ),
+           
+           
           ],
         ),
       ),

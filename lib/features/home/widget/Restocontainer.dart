@@ -5,10 +5,6 @@ import 'package:testing_cashfree/utils/screen_constants.dart';
 import 'package:testing_cashfree/utils/text_styles.dart';
 
 class restocontainer extends StatelessWidget {
-  restocontainer({
-    required this.images,required this.hotelname,required this.cont1,required this.cont2,required this.cont3,required this.Address,required this.Star, required this.tym,required this.Slogo,required this.Soff,
-    super.key,
-  });
   dynamic images;
   String hotelname;
   String cont1;
@@ -19,6 +15,19 @@ class restocontainer extends StatelessWidget {
   String tym;
   String Soff;
   dynamic Slogo;
+  restocontainer({
+    required this.images,
+    required this.hotelname,
+    required this.cont1,
+    required this.cont2,
+    required this.cont3,
+    required this.Address,
+    required this.Star, 
+    required this.tym,
+    required this.Slogo,
+    required this.Soff,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -191,4 +200,5 @@ class restocontainer extends StatelessWidget {
       ),
     );
   }
+
 }
