@@ -1,34 +1,37 @@
 import 'package:flutter/widgets.dart';
-import 'package:testing_cashfree/utils/common_colors.dart';
-import 'package:testing_cashfree/utils/screen_constants.dart';
 
-class filters extends StatelessWidget {
-  filters({
-    required this.icon,
-    required this.text,
-    super.key,
-  });
-  dynamic icon;
-  String text;
+import '../../../utils/screen_constants.dart';
+import '../Modals/filters.dart';
+
+class Filters extends StatefulWidget {
+  const Filters({super.key});
 
   @override
+  State<Filters> createState() => _FiltersState();
+}
+
+class _FiltersState extends State<Filters> {
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(ScreenConstant.size8),
-        color: CommonColors.colorWhiteShade2,
-        border: Border.all(color: CommonColors.yellowShade1)
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical:ScreenConstant.size6 ,horizontal: ScreenConstant.size10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(icon,height: 16,),
-            Text(text),
-          ],
-        ),
-      ),
-    );
+    return SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: ScreenConstant.size16,vertical: ScreenConstant.size10),
+            physics: const BouncingScrollPhysics(),
+             child: Row(
+              children: [
+                filters(icon: "assets/icon/sort.png", text: 'Filter',),
+                const SizedBox(width: 10,),
+                filters(icon: "assets/icon/location1.png", text: 'Nearby'),
+                const SizedBox(width: 10,),
+                filters(icon: "assets/icon/toprate.png", text: 'Top Rated'),
+                const SizedBox(width: 10,),
+                filters(icon: "assets/icon/fastdel.png", text: 'Fastest Delivery'),
+                const SizedBox(width: 10,),
+                filters(icon: "assets/icon/pocket.png", text: 'Pocket Friendly'),
+                const SizedBox(width: 10,),
+                filters(icon: "assets/icon/newarrival.png", text: 'New Arrival'),
+              ],
+             ),
+           );
   }
 }

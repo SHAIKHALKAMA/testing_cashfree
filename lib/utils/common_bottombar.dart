@@ -1,7 +1,7 @@
 // ignore_for_file: must_be_immutable, camel_case_types
 import 'package:flutter/material.dart';
 import 'package:testing_cashfree/features/home/home.dart';
-import 'package:testing_cashfree/features/profile/profile.dart';
+import 'package:testing_cashfree/features/profile/mainprofilescreen/mainscreen/profile.dart';
 import 'package:testing_cashfree/utils/common_colors.dart';
 
 class common_bottombar extends StatefulWidget {

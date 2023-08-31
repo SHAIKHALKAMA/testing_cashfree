@@ -1,8 +1,11 @@
 import 'package:get/get.dart';
 import 'package:testing_cashfree/features/home/home.dart';
-import 'package:testing_cashfree/features/profile/profile.dart';
+import 'package:testing_cashfree/features/profile/mainprofilescreen/mainscreen/profile.dart';
 import 'package:testing_cashfree/utils/common_bottombar.dart';
 import 'package:testing_cashfree/utils/routes/myroutes.dart';
+
+import '../../features/home/widget/searchpage.dart';
+import '../../features/profile/Editscreen/mainscreen/Editprofilepage.dart';
 
 class NavRouter {
   static final generateRoute = [
@@ -16,6 +19,14 @@ class NavRouter {
     GetPage(
       name: RouteConstants.profile,
       page: () => const ProfilePage(),
+    ),
+    GetPage(
+      name: RouteConstants.Editprofilepage,
+      page: () => const Editprofilepage(),
+    ),
+    GetPage(
+      name: RouteConstants.searchpage,
+      page: () => const searchpage(),
     ),
   ];
 }

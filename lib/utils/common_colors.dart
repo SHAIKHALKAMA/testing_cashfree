@@ -46,5 +46,8 @@ class CommonColors {
   static const Color colorFlipShade3 = Color(0xFFe6e1ff);
 
   static const Color yellowShade1 = Color(0xFFFDF5DD);
+  static const Color yellowShade2 = Color.fromARGB(255, 247, 208, 69);
+  static const Color yellowShade3 = Color.fromARGB(255, 247, 225, 148);
+
 
 }

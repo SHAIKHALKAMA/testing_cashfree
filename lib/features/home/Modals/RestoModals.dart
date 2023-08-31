@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
 
 class Recommendedmodel{
   dynamic images;
-  String hotelname;
+  String hname;
   String cont1;
   String cont2;
   String cont3;
@@ -14,7 +13,7 @@ class Recommendedmodel{
 
    Recommendedmodel({
     required this.images,
-    required this.hotelname,
+    required this.hname,
     required this.cont1,
     required this.cont2,
     required this.cont3,
@@ -28,16 +27,16 @@ class Recommendedmodel{
 
 List Recommendedmodellist=[
   Recommendedmodel(images: "assets/images/resto1.png", 
-  hotelname: "Fire Wings", 
+  hname: "Fire Wings", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
   Address: "Near Hafiz Baba Dargah", 
   Star: "4.3", 
   tym: "30 mins  •  ₹230 for two  ",
-  images2: ""),
+  images2: ""), 
   Recommendedmodel(images: "assets/images/resto1a.png", 
-  hotelname: "Bhiwandi Darbar", 
+  hname: "Bhiwandi Darbar", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -46,7 +45,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto2.png", 
-  hotelname: "Mamaji Pavbhaji", 
+  hname: "Mamaji Pavbhaji", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -55,7 +54,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto2a.png", 
-  hotelname: "Anna’s Kitchen", 
+  hname: "Anna’s Kitchen", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -64,7 +63,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto3.png", 
-  hotelname: "A-1 Seekh Paratha", 
+  hname: "A-1 Seekh Paratha", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -73,7 +72,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto1.png", 
-  hotelname: "Fire Wings", 
+  hname: "Fire Wings", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -82,7 +81,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto1a.png", 
-  hotelname: "Bhiwandi Darbar", 
+  hname: "Bhiwandi Darbar", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -91,7 +90,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto2.png", 
-  hotelname: "Mamaji Pavbhaji", 
+  hname: "Mamaji Pavbhaji", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -100,7 +99,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto2a.png", 
-  hotelname: "Anna’s Kitchen", 
+  hname: "Anna’s Kitchen", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -109,7 +108,7 @@ List Recommendedmodellist=[
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
   Recommendedmodel(images: "assets/images/resto3.png", 
-  hotelname: "A-1 Seekh Paratha", 
+  hname: "A-1 Seekh Paratha", 
   cont1: "Burger", 
   cont2: "Pizza", 
   cont3: "Wings", 
@@ -117,22 +116,5 @@ List Recommendedmodellist=[
   Star: "4.3", 
   tym: "30 mins  •  ₹230 for two  ",
   images2: ""),
-  Recommendedmodel(images: "assets/images/resto2a.png", 
-  hotelname: "Anna’s Kitchen", 
-  cont1: "Burger", 
-  cont2: "Pizza", 
-  cont3: "Wings", 
-  Address: "Near Hafiz Baba Dargah", 
-  Star: "4.3", 
-  tym: "30 mins  •  ₹230 for two  ",
-  images2: ""),
-  Recommendedmodel(images: "assets/images/resto3.png", 
-  hotelname: "A-1 Seekh Paratha", 
-  cont1: "Burger", 
-  cont2: "Pizza", 
-  cont3: "Wings", 
-  Address: "Near Hafiz Baba Dargah", 
-  Star: "4.3", 
-  tym: "30 mins  •  ₹230 for two  ",
-  images2: ""),
+  
 ];

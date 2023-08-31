@@ -20,7 +20,7 @@ class cardscontainer extends StatelessWidget {
          shape: RoundedRectangleBorder(
            borderRadius: BorderRadius.circular(ScreenConstant.size16)
          ),
-         color: CommonColors.colorPinkShade1,
+         color: CommonColors.yellowShade1,
          child: SizedBox(
            height: ScreenConstant.size76,
            width: ScreenConstant.size76,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:testing_cashfree/utils/common_colors.dart';
 import 'package:testing_cashfree/utils/screen_constants.dart';
@@ -6,24 +5,26 @@ import 'package:testing_cashfree/utils/text_styles.dart';
 
 class restocontainer extends StatelessWidget {
   dynamic images;
-  String hotelname;
+  String hname;
   String cont1;
   String cont2;
   String cont3;
   String Address;
   String Star;
   String tym;
+   String off;
   String Soff;
   dynamic Slogo;
   restocontainer({
     required this.images,
-    required this.hotelname,
+    required this.hname,
     required this.cont1,
     required this.cont2,
     required this.cont3,
     required this.Address,
     required this.Star, 
     required this.tym,
+    required this.off,
     required this.Slogo,
     required this.Soff,
     super.key,
@@ -41,7 +42,7 @@ class restocontainer extends StatelessWidget {
             height: ScreenConstant.size100,
             width: ScreenConstant.size290,
             decoration: BoxDecoration(
-                color: CommonColors.colorPinkShade1,
+                color: CommonColors.yellowShade1,
                 borderRadius:
                     BorderRadius.circular(ScreenConstant.size12)),
             child: Row(
@@ -97,7 +98,7 @@ class restocontainer extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          hotelname,
+                          hname,
                           style: TextStyles.textStyleBold16,
                         ),
                       ],
@@ -164,9 +165,9 @@ class restocontainer extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow[600],
+                        const Icon(
+                          Icons.star_rounded,
+                          color: Color.fromARGB(255, 245, 206, 33),
                           size: 16,
                         ),
                         Text(
@@ -177,10 +178,25 @@ class restocontainer extends StatelessWidget {
                         const SizedBox(
                           width: 10,
                         ),
-                        Text(
-                          tym,
-                          style: TextStyles.textStyleRegular12
-                              .copyWith(color: Colors.grey),
+                        Row(
+                          children: [
+                            const Icon(Icons.watch_later_rounded,color: CommonColors.colorGreenShade3,size: 12,),
+                            Text(
+                            "$tym  •",
+                              style: TextStyles.textStyleRegular12
+                                  .copyWith(color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                         Row(
+                          children: [
+                            const Icon(Icons.currency_rupee_sharp,size: 12,color:Colors.grey,),
+                            Text(
+                             off,
+                              style: TextStyles.textStyleRegular12
+                                  .copyWith(color: Colors.grey),
+                            ),
+                          ],
                         )
                       ],
                     ),
